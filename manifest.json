@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "ChatGPT Conversation Brancher",
+  "version": "1.0",
+  "description": "Branch off new conversations from ChatGPT responses",
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "storage",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
